@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Stage1 from './components/stage_1'
 import Stage2 from './components/stage_2'
 import { ToastContainer, toast } from 'react-toastify'
@@ -21,7 +21,7 @@ function App () {
 
   const handleRemovePlayer = (index)=> {
     const newPlayers = players.filter((item, i) =>{
-      return index != i
+      return index !== i
     })
     setPlayers(newPlayers)
   }
